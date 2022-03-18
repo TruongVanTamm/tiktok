@@ -1,17 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import App from './App/App.js';
 import reportWebVitals from './reportWebVitals';
+import './index.css'
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+// 1: useEffect(callback)
+// 2: useEffect(callback,[])
+// 3: useEffect(callback.[deps])
+// -----------------------------------------
+// 1. Callback luôn được gọi sau khi component mounted
+// 2. Cleanup function luôn được gọi trước khi compoment umounted
+
 reportWebVitals();
+ReactDOM.render(< App />, document.getElementById('root'))
